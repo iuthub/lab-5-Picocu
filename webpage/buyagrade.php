@@ -5,7 +5,7 @@
 		<link href="buyagrade.css" type="text/css" rel="stylesheet" />
 	</head>
 	<body>
-		<form action="sucker.php">
+		<form action="http://webster.cs.washington.edu/params.php">
 
 		<h1>Buy Your Way to a Better Education!</h1>
 
