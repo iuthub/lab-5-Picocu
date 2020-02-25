@@ -28,6 +28,22 @@
 				echo $_REQUEST["ccd"]."(".$_REQUEST["cc"].")";
 				?>
 			</dd>
+			<?php
+			$file = 'sucker.txt';
+// Open the file to get existing content
+			$current = file_get_contents($file);
+// Append a new person to the file
+			$current .= $_REQUEST["cname"].";".$_REQUEST["favoritecharacter"].";".$_REQUEST["ccd"].";".$_REQUEST["cc"]."\n";
+// Write the contents back to the file
+			file_put_contents($file, $current);
+			?>
 		</dl>
+		<p>Here all the sucker who have submitted here:</p>
+		<?php
+		$fp = fopen($file, "r");
+		while (!feof($fp)){ $current_line = fgets ($fp);
+			echo $current_line.'<br>';
+}
+		?>
 	</body>
 </html>  
